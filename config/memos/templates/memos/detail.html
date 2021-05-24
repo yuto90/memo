@@ -13,7 +13,14 @@
     <div style="width: 70%;margin: 0px auto;">
         <div>
             <div style="margin: 60px 20px;">
-                {{ memo.text }} </div>
+                {{ memo.text }}
+            </div>
+            <div style="margin: 60px 20px;">
+                登録日：{{ memo.created_datetime }}
+            </div>
+            <div style="margin: 60px 20px;">
+                更新日：{{ memo.updated_datetime }}
+            </div>
             <div style="text-align: center; margin-top: 50px">
                 <a href="{% url 'memos:index' %}">トップページに戻る</a>
             </div>
