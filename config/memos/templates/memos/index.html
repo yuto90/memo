@@ -11,13 +11,16 @@
 <body>
     <h1 style="text-align: center;">yuto_memo</h1>
     <div style="width: 70%;margin: 0px auto;">
+        <a href="{% url 'memos:new' %}">
+            <button class="btn">新規メモ作成</button>
+        </a>
         <hr />
         {% for memo in memos %}
         <div>
             <h3>{{ memo.title }}</h3>
             <div>{{ memo.text | truncatechars:100 }}</div>
             <div style="text-align: right;">
-                <a href="{% url 'memos:detail' memo_id=memo.id %}">記事を読む</a>
+                <a href="{% url 'memos:detail' memo_id=memo.id %}">詳細</a>
             </div>
         </div>
         <hr />

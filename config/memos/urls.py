@@ -7,4 +7,5 @@ app_name = 'memos'
 urlpatterns = [
     path('', views.index, name='index'),
     path('detail/<int:memo_id>/', views.detail, name='detail'),
+    path('new/', views.new, name='new'),
 ]
