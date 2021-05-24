@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Memo
 
 # Create your views here.
@@ -11,5 +11,5 @@ def index(request):
 
 
 def detail(request, memo_id):
-    memo = Memo.objects.get(id=memo_id)
+    memo = get_object_or_404(Memo, id=memo_id)
     return render(request, 'memos/detail.html', {'memo': memo})
