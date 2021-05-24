@@ -16,6 +16,9 @@
         <div>
             <h3>{{ memo.title }}</h3>
             <div>{{ memo.text | truncatechars:100 }}</div>
+            <div style="text-align: right;">
+                <a href="{% url 'memos:detail' memo_id=memo.id %}">記事を読む</a>
+            </div>
         </div>
         <hr />
         {% endfor %}
